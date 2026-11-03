@@ -11,7 +11,7 @@ Created a 3-node Minikube cluster with Calico CNI and created the `webapp` names
 minikube start --nodes 3 --cni=calico --cpus 2 --memory 2200
 kubectl create namespace webapp
 ```
-![alt text](screenshots/image.png)
+![alt text](screenshots/get_nodes.png)
 
 ## 2. Deployment Setup
 Created `deployment.yaml` containing:
