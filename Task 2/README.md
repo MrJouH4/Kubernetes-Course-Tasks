@@ -72,13 +72,13 @@ Save your terminal screenshots into `Task-2/images/` and verify each step:
 
 | Step | Command / Action | Expected Result | Screenshot Name |
 | :--- | :--- | :--- | :--- |
-| **1. Loaded Images** | `minikube image ls \| grep webapp` | Displays `webapp-api:task2` & `webapp-mysql:task2` | `01-images.png` |
-| **2. Secret & ConfigMap** | `kubectl get secret,cm -n webapp-stack` | Displays `mysql-secret` and `webapp-config` | `02-config.png` |
-| **3. PV & PVC Status** | `kubectl get pv,pvc -n webapp-stack` | Status shows `Bound` for `mysql-pv` & `mysql-pvc` | `03-storage.png` |
-| **4. Pods & Deployments** | `kubectl get deploy,pods -n webapp-stack -o wide` | `mysql` (1/1) & `webapp-api` (2/2) `Running` | `04-pods.png` |
-| **5. Ingress Status** | `kubectl get ingress -n webapp-stack` | `webapp-ingress` has ingress class `nginx` | `05-ingress.png` |
-| **6. API Info Check** | `curl http://localhost:8080/api/info` | Returns JSON with app title and environment | `06-api-info.png` |
-| **7. Persistence Test** | `kubectl delete pod -n webapp-stack -l app=mysql`<br>`curl http://localhost:8080/api/messages` | New MySQL pod attaches PV and retains written messages | `09-persistence.png` |
+| **1. Loaded Images** | `minikube image ls \| grep webapp` | Displays `webapp-api:task2` & `webapp-mysql:task2` | `Loaded Images.png` |
+| **2. Secret & ConfigMap** | `kubectl get secret,cm -n webapp-stack` | Displays `mysql-secret` and `webapp-config` | `Secrets & ConfigMaps.png` |
+| **3. PV & PVC Status** | `kubectl get pv,pvc -n webapp-stack` | Status shows `Bound` for `mysql-pv` & `mysql-pvc` | `PV & PVC Bound.png` |
+| **4. Pods & Deployments** | `kubectl get deploy,pods -n webapp-stack -o wide` | `mysql` (1/1) & `webapp-api` (2/2) `Running` | `Pods & Deployments Ready.png` |
+| **5. Ingress Status** | `kubectl get ingress -n webapp-stack` | `webapp-ingress` has ingress class `nginx` | `Ingress Active.png` |
+| **6. API Info Check** | `curl http://localhost:8080/api/info` | Returns JSON with app title and environment | `API Status Info.png` |
+| **7. Persistence Test** | `kubectl delete pod -n webapp-stack -l app=mysql`<br>`curl http://localhost:8080/api/messages` | New MySQL pod attaches PV and retains written messages | `Data Persistence.png` |
 
 ---
 
